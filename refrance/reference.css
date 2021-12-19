@@ -1,0 +1,111 @@
+.background-art {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: .3;
+  }
+  .background-art .triangle{
+    --size-tr: 2px;
+    position: absolute;
+    bottom: 5%;
+    left: 30%;
+    background-color: transparent;
+    width: calc(var(--size-tr) *40);
+    height: calc(var(--size-tr) *40);
+    border: none;
+    border-right: var(--size-tr) solid var(--border);
+    overflow: hidden;
+  }
+  .background-art .triangle::before {
+    content: "";
+    position: absolute;
+    top: -4%;
+    left: 61%;
+    background-color: transparent;
+    width: 125%;
+    height: 110%;
+    transform: rotate(-212deg) skew(29deg);
+    border: var(--size-tr) solid var(--border);
+  }
+  .background-art .triangle:nth-child(4){
+    --size-tr: 10px;
+    top: 15%;
+    right: -10%;
+  }
+  .background-art .triangle:nth-of-type(5){
+    --size-tr: 20px;
+    bottom: 15%;
+    right: 30%;
+  }
+/* ------------------------------------------------------- */
+.zigzag {
+  position: absolute;
+  bottom: 8rem;
+  width: 100%;
+  height: 30px;
+  /* border: 1px solid red; */
+}
+.zigzag::before,
+.zigzag::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.zigzag::before {
+  height: 20px;
+  top: 120%;
+  background: linear-gradient(-135deg, #5a5a5a 15px, transparent 0),
+    linear-gradient(135deg, #5a5a5a 15px, transparent 0);
+  background-position: top left;
+  background-repeat: repeat-x;
+  background-size: 30px 30px;
+}
+.zigzag::after {
+  height: 20px;
+  top: 100%;
+  background: linear-gradient(-135deg, var(--bk-l) 15px, transparent 0),
+    linear-gradient(135deg, var(--bk-l) 15px, transparent 0);
+  background-position: top left;
+  background-repeat: repeat-x;
+  background-size: 30px 30px;
+}
+/* ----------------------------------- */
+div{
+
+    background: radial-gradient(#004242 , transparent, transparent);
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.5));
+    border-radius: 38% 62% 53% 35% / 41% 54% 45% 59%;
+}
+
+  /* transform: scaleX(-1); */
+
+
+ul.sections-icons li .icon-title span::before{
+    position: absolute;
+    content: '';
+    top: 65%;
+    left: -100%;
+    width: 100%;
+    transform: translateY(-50%);
+    border: .5rem solid transparent;
+    border-right-color: hsl(var(--H5), var(--S5), var(--L5));
+}
+
+
+
+section.services .box-services .bx-article article::before {
+  content: '';
+  position: absolute;
+  bottom: -5%;
+  width: 130%;
+  height: 60%;
+  border-radius: 50%;
+  background: repeating-radial-gradient(
+    hsla(var(--H10),var(--S10),var(--L10) , .4) .001% ,
+    hsl(91, 22%, 27%) .003%, 
+    hsl(91, 93%, 22%) .005%);
+  box-shadow: 5px 9px 9px rgba(0, 0, 0 , 0.6);
+}

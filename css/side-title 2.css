@@ -1,0 +1,191 @@
+/* /////////////////////////////////////// */
+/* ///////// Sections-icons */
+/* ////////////////////////////////////// */
+
+ul.sections-icons{
+    position: fixed;
+    left: 5%;
+    top: 60%;
+    transform: translateY(-50%);
+    width: .5rem;
+    height: 95vh;
+    border: none;
+    background: var(--border);
+    border-top-left-radius: 7rem;
+    border-top-right-radius: 7rem;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    z-index: 100;
+    visibility: hidden ;
+    transition: 1s ease-in;
+}
+body[dir="rtl"] ul.sections-icons{
+    right: 5%;
+}
+/* ----------------------------------------- */
+ul.sections-icons::after{
+    content: '';
+    position: absolute;
+    top: -.2rem;
+    left: 2.5rem;
+    border: .5rem solid transparent;
+    border-left: 1rem solid var(--border);
+    transition: 1s ease-in;
+
+}
+body[dir="rtl"] ul.sections-icons::after{
+    right: 2.5rem;
+    border: .5rem solid transparent;
+    border-right: 1rem solid var(--border);
+}
+/* ------------------------------------------- */
+ul.sections-icons::before{
+    position: absolute;
+    content: '';
+    width: 3rem;
+    height: .5rem;
+    border: none;
+    background-color: var(--border);
+    border-radius: 5rem;
+    transition: 1s ease-in;
+}
+/* ----------------------------------------- */
+ul.sections-icons li{
+    position: absolute;
+    left: 5rem;
+    top: calc(var(--h-) * 6%);
+    width: 0;
+    height: 0;
+    margin-top: -1rem;
+    display: flex;
+    /* margin-left: -1rem; */
+    opacity: .8;
+    transition: 1s ease-in;
+    /* outline: 1px solid #fff; */
+
+}
+body[dir="rtl"] ul.sections-icons li{
+    right: 5rem;
+}
+/* -------------------------------------- */
+
+ul.sections-icons li:not(:last-child){
+    margin-bottom: 2rem;
+}
+/* -------------------------------------- */
+ul.sections-icons li.active{
+    top: 0;
+    width: max-content;
+    height: max-content;
+    opacity: 1;
+    transition: 1s ease-in-out;
+}
+/* -------------------------------------- */
+ul.sections-icons li::before{
+    position: absolute;
+    content: '';
+    display: block;
+    top: 1.5rem;
+    left: -5rem;
+    width: 4.8rem;
+    height: 0;
+    border-top: 2px solid var(--border);
+    /* background-color: var(--bk-s); */
+    opacity: 1;
+    transition: 1s ease-in;
+}
+body[dir="rtl"] ul.sections-icons li::before{
+    right: -5rem;
+}
+/* -------------------------------------- */
+ul.sections-icons li.active::before{
+    opacity: 0;
+}
+/* -------------------------------------- */
+ul.sections-icons li .icon-title{
+    position: relative;
+    height: max-content;
+    width: max-content;
+    display: flex;
+    align-items: center;
+}
+/* -------------------------------------- */
+ul.sections-icons li .icon-title i{
+    height: max-content;
+    padding: .5rem ;
+    border: 3px solid hsl(var(--H3), var(--S3), var(--L3));;
+    border-radius: 38% 62% 53% 35% / 41% 54% 45% 59%;
+    font-size: var(--big-size);
+    color: hsla(var(--H7), var(--S7), var(--L7) , .7);
+    cursor: pointer;
+    transform: scale(1);
+    transition: .2s ease-in;
+}
+ul.sections-icons li:hover i{
+    animation: shake .3s forwards;
+}
+/* -------------------------------------- */
+ul.sections-icons li.active .icon-title i{
+    text-align: center;
+    color: hsla(var(--H8), var(--S8), var(--L8) , .7);
+    width: max-content;
+    background-color: hsl(var(--H4), var(--S4), var(--L4));
+    border-width: 5px;
+    border-style: solid;
+    transform: scale(1.2);
+    transition: .5s ease 1s ;
+    animation: shake2 1s 1s infinite;
+}
+/* -------------------------------------- */
+ul.sections-icons li .icon-title span{
+    position: relative;
+    font-family: var(--body-font-1);
+    font-size: var(--me-size) ;
+    color: hsl(var(--H5), var(--S5), var(--L5));
+    /* border: 2px solid hsl(var(--H9), var(--S4), var(--L4)); */
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    padding-inline-start: .5rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(40%);
+    cursor: pointer;
+    transition: .5s ease-in;
+}
+body[dir="rtl"] ul.sections-icons li .icon-title span{
+    transform: translateX(-40%);
+}
+/* -------------------------------------- */
+ul.sections-icons li:hover:not(li.active) .icon-title span{
+    transform: translateX(20%);
+    opacity: 1;
+    visibility: visible;
+}
+body[dir="rtl"] ul.sections-icons li:hover:not(li.active) .icon-title span{
+    transform: translateX(-20%);
+}
+/* -------------------------------------- */
+ul.sections-icons li.active .icon-title span{
+    display: none;
+}
+/* -------------------------------------- */
+ul.sections-icons li .icon-title span::before{
+    position: absolute;
+    content: '';
+    top: 65%;
+    left: -100%;
+    width: 100%;
+    transform: translateY(-50%);
+    border: .5rem solid transparent;
+    border-right-color: hsl(var(--H5), var(--S5), var(--L5));
+}
+body[dir="rtl"] ul.sections-icons li .icon-title span::before{
+    right: -100%;
+    border: .5rem solid transparent;
+    border-left-color: hsl(var(--H5), var(--S5), var(--L5));
+}
+/* -------------------------------------- */
+
+/* -------------------------------------- */

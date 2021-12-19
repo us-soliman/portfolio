@@ -215,7 +215,7 @@ ul {
 
 body {
   background-color: hsl(var(--H), var(--S), var(--L));
-  cursor: none;
+  /* cursor: none; */
 }
 
 .container {
@@ -241,14 +241,17 @@ section{
 .cursor{
   position: absolute;
   transform: translate(-50% , -50%);
-  width: 2rem;
-  height: 2rem;
-  border: 15px solid hsla(var(--H5), var(--S5), var(--L5) ,  .8);
+  width: .5rem;
+  height: .5rem;
+  box-shadow: 0 0 20px 5px hsl(var(--H4), var(--S4), var(--L4)),
+              0 0 40px 10px #fff;
+  background-color: hsl(var(--H5), var(--S5), var(--L5));
+  /* border: 15px solid hsla(var(--H5), var(--S5), var(--L5) ,  .8); */
   border-radius: 50%;
   pointer-events: none;
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
   z-index: 2000000;
-  transition: none;
+  transition: .2s;
 }
 
 /* /////////// */

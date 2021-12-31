@@ -474,7 +474,7 @@ section.services .attach-image{
   top: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/image/work.jpg');
+  background-image: url('./image/work.jpg');
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;

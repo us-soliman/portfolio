@@ -1083,7 +1083,7 @@ footer .mshroom-2{
   flex-direction: column;
 }
 .social .logo{
-  background: url('../image/Logo-light.png');
+  background: url('./image/Logo-light.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;

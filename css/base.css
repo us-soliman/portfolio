@@ -463,7 +463,7 @@ aside .setting div.image{
   right: 0;
   width: 50%;
   height: 50%;
-  background-image: url('../image/grass.png');
+  background-image: url('./image/grass.png');
   background-position: bottom;
   background-size: 100% 50%;
   background-repeat: no-repeat;
